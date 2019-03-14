@@ -9,6 +9,12 @@
 import UIKit
 
 class PanoramaViewController: UIViewController {
+  var controller: PanoramaController?
+  
+  convenience init(controller: PanoramaController) {
+    self.init()
+    self.controller = controller
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()

@@ -16,6 +16,8 @@
 		4CB9F3CA223A615A008F736A /* PanoramaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB9F3C8223A615A008F736A /* PanoramaViewController.xib */; };
 		4CB9F3CD223A79E3008F736A /* GoogleMapsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3CC223A79E3008F736A /* GoogleMapsService.swift */; };
 		4CB9F3D0223A7A7A008F736A /* GoogleMapsServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3CF223A7A7A008F736A /* GoogleMapsServiceImplementation.swift */; };
+		4CB9F3D3223A7F3F008F736A /* PanoramaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3D2223A7F3F008F736A /* PanoramaController.swift */; };
+		4CB9F3D5223A8054008F736A /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3D4223A8054008F736A /* RootRouter.swift */; };
 		7695A6BF00575867942415FF /* Pods_Guess_the_Place_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB044B08C187E5C37810B6AE /* Pods_Guess_the_Place_.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		4CB9F3C8223A615A008F736A /* PanoramaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanoramaViewController.xib; sourceTree = "<group>"; };
 		4CB9F3CC223A79E3008F736A /* GoogleMapsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsService.swift; sourceTree = "<group>"; };
 		4CB9F3CF223A7A7A008F736A /* GoogleMapsServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsServiceImplementation.swift; sourceTree = "<group>"; };
+		4CB9F3D2223A7F3F008F736A /* PanoramaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaController.swift; sourceTree = "<group>"; };
+		4CB9F3D4223A8054008F736A /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		5EA408CA3833CAB279C778DF /* Pods-Guess the Place!Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!Tests.release.xcconfig"; path = "Target Support Files/Pods-Guess the Place!Tests/Pods-Guess the Place!Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7B5811B68721DEA074DBBDE7 /* Pods-Guess the Place!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!.debug.xcconfig"; path = "Target Support Files/Pods-Guess the Place!/Pods-Guess the Place!.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A642AC660A24B2ADE70EEF /* Pods-Guess the Place!Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!Tests.debug.xcconfig"; path = "Target Support Files/Pods-Guess the Place!Tests/Pods-Guess the Place!Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 		4CB9F3C3223A6109008F736A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4CB9F3D1223A7F2A008F736A /* Controllers */,
 				4CB9F3CB223A79C9008F736A /* Services */,
 				4CB9F3C5223A6128008F736A /* Screens */,
 				4CB9F3C4223A6121008F736A /* Routers */,
@@ -132,6 +137,7 @@
 		4CB9F3C4223A6121008F736A /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				4CB9F3D4223A8054008F736A /* RootRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -168,6 +174,14 @@
 				4CB9F3CF223A7A7A008F736A /* GoogleMapsServiceImplementation.swift */,
 			);
 			path = "Google Maps";
+			sourceTree = "<group>";
+		};
+		4CB9F3D1223A7F2A008F736A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CB9F3D2223A7F3F008F736A /* PanoramaController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		D20E324F8E48D538B030FFB8 /* Pods */ = {
@@ -367,7 +381,9 @@
 			files = (
 				4CB9F3A3223A5ED8008F736A /* AppDelegate.swift in Sources */,
 				4CB9F3D0223A7A7A008F736A /* GoogleMapsServiceImplementation.swift in Sources */,
+				4CB9F3D3223A7F3F008F736A /* PanoramaController.swift in Sources */,
 				4CB9F3CD223A79E3008F736A /* GoogleMapsService.swift in Sources */,
+				4CB9F3D5223A8054008F736A /* RootRouter.swift in Sources */,
 				4CB9F3C9223A615A008F736A /* PanoramaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

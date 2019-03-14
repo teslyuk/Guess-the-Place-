@@ -9,6 +9,6 @@
 import Foundation
 import GoogleMaps
 
-protocol GoogleMapsService {
+protocol GoogleMapsService: class {
   func register(with apiKey: String)
 }

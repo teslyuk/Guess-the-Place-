@@ -14,9 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   private let googleService: GoogleMapsService = GoogleMapsServiceImplementation()
   private let apiKey = "AIzaSyDz9wkuMNtc4JICs9066L2wLnv6O_pR4hY"
+  private let rootRouter = RootRouter()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     googleService.register(with: apiKey)
+    
+    let panoramaController = PanoramaController(googleService: googleService)
+    let panoramaViewController = PanoramaViewController(controller: panoramaController)
+    rootRouter.root(&window, rootViewController: panoramaViewController)
     return true
   }
   
