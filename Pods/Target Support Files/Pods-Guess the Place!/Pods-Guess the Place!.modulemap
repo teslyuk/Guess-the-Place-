@@ -1,0 +1,6 @@
+framework module Pods_Guess_the_Place_ {
+  umbrella header "Pods-Guess the Place!-umbrella.h"
+
+  export *
+  module * { export * }
+}
