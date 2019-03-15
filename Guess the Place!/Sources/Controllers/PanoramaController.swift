@@ -7,11 +7,22 @@
 //
 
 import Foundation
+import GoogleMaps
 
-class PanoramaController {
+class PanoramaController: NSObject, Lifecycable {
   private weak var googleService: GoogleMapsService?
+  weak var viewController: PanoramaViewController?
+  
+  var panoramaView: GMSPanoramaView? {
+    return viewController?.panoramaView
+  }
   
   init(googleService: GoogleMapsService) {
     self.googleService = googleService
+  }
+  
+  func viewDidLoad() {
+    let coords = RandomCoords(minDistance: 100, maxDistance: 25000).value
+    panoramaView?.moveNearCoordinate(coords)
   }
 }

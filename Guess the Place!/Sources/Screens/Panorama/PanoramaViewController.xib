@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PanoramaViewController" customModule="Guess_the_Place_" customModuleProvider="target">
             <connections>
+                <outlet property="panoramaView" destination="2rE-zR-mL0" id="KUh-hr-PI7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +20,19 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rE-zR-mL0" customClass="GMSPanoramaView">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="2rE-zR-mL0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3Rq-4z-4nK"/>
+                <constraint firstItem="2rE-zR-mL0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="YR9-u5-wUH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2rE-zR-mL0" secondAttribute="bottom" id="gjf-UH-eMU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2rE-zR-mL0" secondAttribute="trailing" id="isR-Ki-Sca"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
