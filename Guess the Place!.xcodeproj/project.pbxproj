@@ -13,7 +13,6 @@
 		4CB9F3AD223A5EDA008F736A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CB9F3AB223A5EDA008F736A /* LaunchScreen.storyboard */; };
 		4CB9F3B8223A5EDA008F736A /* Guess_the_Place_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3B7223A5EDA008F736A /* Guess_the_Place_Tests.swift */; };
 		4CB9F3C9223A615A008F736A /* PanoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3C7223A615A008F736A /* PanoramaViewController.swift */; };
-		4CB9F3CA223A615A008F736A /* PanoramaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB9F3C8223A615A008F736A /* PanoramaViewController.xib */; };
 		4CB9F3CD223A79E3008F736A /* GoogleMapsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3CC223A79E3008F736A /* GoogleMapsService.swift */; };
 		4CB9F3D0223A7A7A008F736A /* GoogleMapsServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3CF223A7A7A008F736A /* GoogleMapsServiceImplementation.swift */; };
 		4CB9F3D3223A7F3F008F736A /* PanoramaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3D2223A7F3F008F736A /* PanoramaController.swift */; };
@@ -21,6 +20,10 @@
 		4CB9F3D9223BB312008F736A /* Lifecycable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3D8223BB312008F736A /* Lifecycable.swift */; };
 		4CB9F3DC223BB523008F736A /* RandomCoords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3DB223BB523008F736A /* RandomCoords.swift */; };
 		4CB9F3DE223E80E6008F736A /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3DD223E80E6008F736A /* RandomNumber.swift */; };
+		4CB9F3E1223E8AA4008F736A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3DF223E8AA4008F736A /* MapViewController.swift */; };
+		4CB9F3E5223E8C18008F736A /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB9F3E4223E8C18008F736A /* MapViewController.xib */; };
+		4CB9F3E8223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3E7223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift */; };
+		4CB9F3EA223E9086008F736A /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3E9223E9086008F736A /* MapController.swift */; };
 		7695A6BF00575867942415FF /* Pods_Guess_the_Place_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB044B08C187E5C37810B6AE /* Pods_Guess_the_Place_.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +49,6 @@
 		4CB9F3B7223A5EDA008F736A /* Guess_the_Place_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess_the_Place_Tests.swift; sourceTree = "<group>"; };
 		4CB9F3B9223A5EDA008F736A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CB9F3C7223A615A008F736A /* PanoramaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaViewController.swift; sourceTree = "<group>"; };
-		4CB9F3C8223A615A008F736A /* PanoramaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanoramaViewController.xib; sourceTree = "<group>"; };
 		4CB9F3CC223A79E3008F736A /* GoogleMapsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsService.swift; sourceTree = "<group>"; };
 		4CB9F3CF223A7A7A008F736A /* GoogleMapsServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsServiceImplementation.swift; sourceTree = "<group>"; };
 		4CB9F3D2223A7F3F008F736A /* PanoramaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanoramaController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,10 @@
 		4CB9F3D8223BB312008F736A /* Lifecycable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifecycable.swift; sourceTree = "<group>"; };
 		4CB9F3DB223BB523008F736A /* RandomCoords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCoords.swift; sourceTree = "<group>"; };
 		4CB9F3DD223E80E6008F736A /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
+		4CB9F3DF223E8AA4008F736A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4CB9F3E4223E8C18008F736A /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		4CB9F3E7223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
+		4CB9F3E9223E9086008F736A /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		5EA408CA3833CAB279C778DF /* Pods-Guess the Place!Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!Tests.release.xcconfig"; path = "Target Support Files/Pods-Guess the Place!Tests/Pods-Guess the Place!Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7B5811B68721DEA074DBBDE7 /* Pods-Guess the Place!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!.debug.xcconfig"; path = "Target Support Files/Pods-Guess the Place!/Pods-Guess the Place!.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A642AC660A24B2ADE70EEF /* Pods-Guess the Place!Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!Tests.debug.xcconfig"; path = "Target Support Files/Pods-Guess the Place!Tests/Pods-Guess the Place!Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +138,7 @@
 		4CB9F3C3223A6109008F736A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4CB9F3E6223E8CF6008F736A /* Extensions */,
 				4CB9F3DA223BB511008F736A /* Models */,
 				4CB9F3D7223BB2F9008F736A /* Protocols */,
 				4CB9F3D1223A7F2A008F736A /* Controllers */,
@@ -154,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				4CB9F3C6223A6140008F736A /* Panorama */,
+				4CB9F3E3223E8AA8008F736A /* Map */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -162,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				4CB9F3C7223A615A008F736A /* PanoramaViewController.swift */,
-				4CB9F3C8223A615A008F736A /* PanoramaViewController.xib */,
 			);
 			path = Panorama;
 			sourceTree = "<group>";
@@ -188,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				4CB9F3D2223A7F3F008F736A /* PanoramaController.swift */,
+				4CB9F3E9223E9086008F736A /* MapController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,6 +215,23 @@
 				4CB9F3DD223E80E6008F736A /* RandomNumber.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4CB9F3E3223E8AA8008F736A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				4CB9F3DF223E8AA4008F736A /* MapViewController.swift */,
+				4CB9F3E4223E8C18008F736A /* MapViewController.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		4CB9F3E6223E8CF6008F736A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4CB9F3E7223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D20E324F8E48D538B030FFB8 /* Pods */ = {
@@ -313,9 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CB9F3CA223A615A008F736A /* PanoramaViewController.xib in Resources */,
 				4CB9F3AD223A5EDA008F736A /* LaunchScreen.storyboard in Resources */,
 				4CB9F3AA223A5EDA008F736A /* Assets.xcassets in Resources */,
+				4CB9F3E5223E8C18008F736A /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,12 +432,15 @@
 				4CB9F3DC223BB523008F736A /* RandomCoords.swift in Sources */,
 				4CB9F3A3223A5ED8008F736A /* AppDelegate.swift in Sources */,
 				4CB9F3D0223A7A7A008F736A /* GoogleMapsServiceImplementation.swift in Sources */,
+				4CB9F3E1223E8AA4008F736A /* MapViewController.swift in Sources */,
+				4CB9F3EA223E9086008F736A /* MapController.swift in Sources */,
 				4CB9F3D3223A7F3F008F736A /* PanoramaController.swift in Sources */,
 				4CB9F3CD223A79E3008F736A /* GoogleMapsService.swift in Sources */,
 				4CB9F3D5223A8054008F736A /* RootRouter.swift in Sources */,
 				4CB9F3D9223BB312008F736A /* Lifecycable.swift in Sources */,
 				4CB9F3C9223A615A008F736A /* PanoramaViewController.swift in Sources */,
 				4CB9F3DE223E80E6008F736A /* RandomNumber.swift in Sources */,
+				4CB9F3E8223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

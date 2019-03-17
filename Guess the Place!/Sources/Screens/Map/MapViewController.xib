@@ -10,9 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PanoramaViewController" customModule="Guess_the_Place_" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="Guess_the_Place_" customModuleProvider="target">
             <connections>
-                <outlet property="panoramaView" destination="2rE-zR-mL0" id="KUh-hr-PI7"/>
+                <outlet property="mapView" destination="0ln-8M-rgX" id="eat-H8-yEh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,17 +21,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rE-zR-mL0" customClass="GMSPanoramaView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ln-8M-rgX" customClass="GMSMapView">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="2rE-zR-mL0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3Rq-4z-4nK"/>
-                <constraint firstItem="2rE-zR-mL0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="YR9-u5-wUH"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2rE-zR-mL0" secondAttribute="bottom" id="gjf-UH-eMU"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2rE-zR-mL0" secondAttribute="trailing" id="isR-Ki-Sca"/>
+                <constraint firstItem="0ln-8M-rgX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="FeN-ne-gss"/>
+                <constraint firstItem="0ln-8M-rgX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GGt-G7-pvM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0ln-8M-rgX" secondAttribute="trailing" id="IiG-B6-4SX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0ln-8M-rgX" secondAttribute="bottom" id="LfF-0Z-xjV"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
