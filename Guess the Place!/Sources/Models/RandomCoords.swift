@@ -12,41 +12,20 @@ import CoreLocation
 class RandomCoords {
   let value: CLLocationCoordinate2D
   
-  init (minDistance: UInt32, maxDistance: UInt32) {
-    self.value = RandomCoords.generateRandomCoordinates(min: minDistance, max: maxDistance)
-  }
+  private let arrayOfCoordinates = [
+    CLLocationCoordinate2D(latitude: 55.809689, longitude: 37.554334),
+    CLLocationCoordinate2D(latitude: 63.417582, longitude: -19.004353),
+    CLLocationCoordinate2D(latitude: 43.645688, longitude: -79.378533),
+    CLLocationCoordinate2D(latitude: -54.346515, longitude: -66.709404),
+    CLLocationCoordinate2D(latitude: 37.460166, longitude: -122.162107),
+    CLLocationCoordinate2D(latitude: 7.832160, longitude: 80.226570),
+    CLLocationCoordinate2D(latitude: -18.447031, longitude: 48.050101),
+    CLLocationCoordinate2D(latitude: -33.732798, longitude: 116.051693),
+    CLLocationCoordinate2D(latitude: 38.483571, longitude: 141.298873),
+    CLLocationCoordinate2D(latitude: -17.681098, longitude: -149.549660),
+  ]
   
-  private static func generateRandomCoordinates(min: UInt32, max: UInt32) -> CLLocationCoordinate2D {
-    //Get the Current Location's longitude and latitude
-    let currentLong = 88.896770
-    let currentLat = 32.351679
-    
-    //1 KiloMeter = 0.00900900900901° So, 1 Meter = 0.00900900900901 / 1000
-    let meterCord = 0.00900900900901 / 1000
-    
-    //Generate random Meters between the maximum and minimum Meters
-    let randomMeters = UInt(arc4random_uniform(max) + min)
-    
-    //then Generating Random numbers for different Methods
-    let randomPM = arc4random_uniform(6)
-    
-    //Then we convert the distance in meters to coordinates by Multiplying number of meters with 1 Meter Coordinate
-    let metersCordN = meterCord * Double(randomMeters)
-    
-    //here we generate the last Coordinates
-    if randomPM == 0 {
-      return CLLocationCoordinate2D(latitude: currentLat + metersCordN, longitude: currentLong + metersCordN)
-    } else if randomPM == 1 {
-      return CLLocationCoordinate2D(latitude: currentLat - metersCordN, longitude: currentLong - metersCordN)
-    } else if randomPM == 2 {
-      return CLLocationCoordinate2D(latitude: currentLat + metersCordN, longitude: currentLong - metersCordN)
-    } else if randomPM == 3 {
-      return CLLocationCoordinate2D(latitude: currentLat - metersCordN, longitude: currentLong + metersCordN)
-    } else if randomPM == 4 {
-      return CLLocationCoordinate2D(latitude: currentLat, longitude: currentLong - metersCordN)
-    } else {
-      return CLLocationCoordinate2D(latitude: currentLat - metersCordN, longitude: currentLong)
-    }
-    
+  init () {
+    self.value = arrayOfCoordinates.randomElement()!
   }
 }

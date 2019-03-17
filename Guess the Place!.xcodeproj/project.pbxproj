@@ -20,6 +20,7 @@
 		4CB9F3D5223A8054008F736A /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3D4223A8054008F736A /* RootRouter.swift */; };
 		4CB9F3D9223BB312008F736A /* Lifecycable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3D8223BB312008F736A /* Lifecycable.swift */; };
 		4CB9F3DC223BB523008F736A /* RandomCoords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3DB223BB523008F736A /* RandomCoords.swift */; };
+		4CB9F3DE223E80E6008F736A /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3DD223E80E6008F736A /* RandomNumber.swift */; };
 		7695A6BF00575867942415FF /* Pods_Guess_the_Place_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB044B08C187E5C37810B6AE /* Pods_Guess_the_Place_.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		4CB9F3D4223A8054008F736A /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		4CB9F3D8223BB312008F736A /* Lifecycable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifecycable.swift; sourceTree = "<group>"; };
 		4CB9F3DB223BB523008F736A /* RandomCoords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCoords.swift; sourceTree = "<group>"; };
+		4CB9F3DD223E80E6008F736A /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		5EA408CA3833CAB279C778DF /* Pods-Guess the Place!Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!Tests.release.xcconfig"; path = "Target Support Files/Pods-Guess the Place!Tests/Pods-Guess the Place!Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7B5811B68721DEA074DBBDE7 /* Pods-Guess the Place!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!.debug.xcconfig"; path = "Target Support Files/Pods-Guess the Place!/Pods-Guess the Place!.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A642AC660A24B2ADE70EEF /* Pods-Guess the Place!Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!Tests.debug.xcconfig"; path = "Target Support Files/Pods-Guess the Place!Tests/Pods-Guess the Place!Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				4CB9F3DB223BB523008F736A /* RandomCoords.swift */,
+				4CB9F3DD223E80E6008F736A /* RandomNumber.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				4CB9F3D5223A8054008F736A /* RootRouter.swift in Sources */,
 				4CB9F3D9223BB312008F736A /* Lifecycable.swift in Sources */,
 				4CB9F3C9223A615A008F736A /* PanoramaViewController.swift in Sources */,
+				4CB9F3DE223E80E6008F736A /* RandomNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
