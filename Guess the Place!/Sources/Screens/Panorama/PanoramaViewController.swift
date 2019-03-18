@@ -17,9 +17,15 @@ class PanoramaViewController: UIViewController {
     return panoramaView
   }()
 
-  private var mapViewController: MapViewController?
+  private(set) var mapViewController: MapViewController?
   private var controller: PanoramaController?
   private var mapViewControllerHeightConstraint: NSLayoutConstraint?
+  
+  // MARK: Private configuration
+  private let minMapViewHeight: CGFloat = 150
+  private let maxMapViewHeight: CGFloat = 500
+  private let animationDuration: TimeInterval = 0.25
+  //
   
   convenience init(controller: PanoramaController, mapViewController: MapViewController) {
     self.init()
@@ -39,6 +45,20 @@ class PanoramaViewController: UIViewController {
     view.addSubview(panoramaView)
     let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[panoramaView]|,V:|[panoramaView]", dict: ["panoramaView" : panoramaView])
     view.addConstraints(constraints)
+  }
+  
+  func hideMapViewController() {
+    UIView.animate(withDuration: animationDuration) { [unowned self] in
+      self.mapViewControllerHeightConstraint?.constant = self.minMapViewHeight
+      self.view.layoutIfNeeded()
+    }
+  }
+  
+  func expandMapViewController() {
+    UIView.animate(withDuration: animationDuration) { [unowned self] in
+      self.mapViewControllerHeightConstraint?.constant = self.maxMapViewHeight
+      self.view.layoutIfNeeded()
+    }
   }
   
   private func addMapViewController() {

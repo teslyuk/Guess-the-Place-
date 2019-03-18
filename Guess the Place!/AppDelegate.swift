@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     googleService.register(with: apiKey)
     
     let panoramaController = PanoramaController(googleService: googleService)
-    let mapViewController = MapViewController()
+    let mapController = MapController()
+    let mapViewController = MapViewController(mapController: mapController)
     let panoramaViewController = PanoramaViewController(controller: panoramaController, mapViewController: mapViewController)
     rootRouter.root(&window, rootViewController: panoramaViewController)
     return true

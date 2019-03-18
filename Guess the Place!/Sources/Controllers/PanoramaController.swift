@@ -24,5 +24,18 @@ class PanoramaController: NSObject, Lifecycable {
   func viewDidLoad() {
     let coords = RandomCoords().value
     panoramaView?.moveNearCoordinate(coords, radius: 1500)
+    observeMapControllerClosures()
+  }
+  
+  private func observeMapControllerClosures() {
+    let mapController = viewController?.mapViewController?.mapController
+    
+    mapController?.mapViewMovingEnded = { [unowned self] in
+      self.viewController?.hideMapViewController()
+    }
+    
+    mapController?.mapViewMovingStarted = { [unowned self] in
+      self.viewController?.expandMapViewController()
+    }
   }
 }
