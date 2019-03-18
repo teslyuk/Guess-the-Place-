@@ -19,7 +19,6 @@
 		4CB9F3D5223A8054008F736A /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3D4223A8054008F736A /* RootRouter.swift */; };
 		4CB9F3D9223BB312008F736A /* Lifecycable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3D8223BB312008F736A /* Lifecycable.swift */; };
 		4CB9F3DC223BB523008F736A /* RandomCoords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3DB223BB523008F736A /* RandomCoords.swift */; };
-		4CB9F3DE223E80E6008F736A /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3DD223E80E6008F736A /* RandomNumber.swift */; };
 		4CB9F3E1223E8AA4008F736A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3DF223E8AA4008F736A /* MapViewController.swift */; };
 		4CB9F3E5223E8C18008F736A /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB9F3E4223E8C18008F736A /* MapViewController.xib */; };
 		4CB9F3E8223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3E7223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift */; };
@@ -56,7 +55,6 @@
 		4CB9F3D4223A8054008F736A /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		4CB9F3D8223BB312008F736A /* Lifecycable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifecycable.swift; sourceTree = "<group>"; };
 		4CB9F3DB223BB523008F736A /* RandomCoords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCoords.swift; sourceTree = "<group>"; };
-		4CB9F3DD223E80E6008F736A /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		4CB9F3DF223E8AA4008F736A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4CB9F3E4223E8C18008F736A /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		4CB9F3E7223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				4CB9F3DB223BB523008F736A /* RandomCoords.swift */,
-				4CB9F3DD223E80E6008F736A /* RandomNumber.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -451,7 +448,6 @@
 				4CB9F41D223FFA77008F736A /* Typealiases.swift in Sources */,
 				4CB9F3D9223BB312008F736A /* Lifecycable.swift in Sources */,
 				4CB9F3C9223A615A008F736A /* PanoramaViewController.swift in Sources */,
-				4CB9F3DE223E80E6008F736A /* RandomNumber.swift in Sources */,
 				4CB9F3E8223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

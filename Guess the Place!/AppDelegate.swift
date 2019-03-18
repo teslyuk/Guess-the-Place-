@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let mapController = MapController()
     let mapViewController = MapViewController(mapController: mapController)
     let panoramaViewController = PanoramaViewController(controller: panoramaController, mapViewController: mapViewController)
+    
     rootRouter.root(&window, rootViewController: panoramaViewController)
     return true
   }
