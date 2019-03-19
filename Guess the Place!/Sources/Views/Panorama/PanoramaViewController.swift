@@ -11,11 +11,23 @@ import GoogleMaps
 
 class PanoramaViewController: UIViewController {
 
+  // MARK: - Custom views
   let panoramaView: GMSPanoramaView = {
     let panoramaView = GMSPanoramaView()
     panoramaView.translatesAutoresizingMaskIntoConstraints = false
     return panoramaView
   }()
+  
+  let downArrowButton: UIButton = {
+    let button = UIButton()
+    button.setImage(UIImage(named: "down_arrow"), for: .normal)
+    button.alpha = 0
+    button.translatesAutoresizingMaskIntoConstraints = false
+    button.imageView?.contentMode = .scaleAspectFit
+    button.imageView?.tintColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
+    return button
+  }()
+  //
 
   private(set) var mapViewController: MapViewController?
   private var controller: PanoramaController?
@@ -36,9 +48,21 @@ class PanoramaViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    Decorator.decorate(self)
     controller?.viewDidLoad()
     addPanoramaView()
     addMapViewController()
+    addDownArrowButton()
+  }
+  
+  private func addDownArrowButton() {
+    view.addSubview(downArrowButton)
+    let sizeConstant = 44
+    guard let mapView = mapViewController?.view else {
+      return
+    }
+    let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:[downArrowButton(\(sizeConstant))]-16-|,V:[downArrowButton(\(sizeConstant))]-16-[mapView]", dict: ["downArrowButton" : downArrowButton, "mapView" : mapView])
+    view.addConstraints(constraints)
   }
   
   private func addPanoramaView() {
@@ -50,6 +74,7 @@ class PanoramaViewController: UIViewController {
   func hideMapViewController() {
     UIView.animate(withDuration: animationDuration) { [unowned self] in
       self.mapViewControllerHeightConstraint?.constant = self.minMapViewHeight
+      self.downArrowButton.alpha = 0
       self.view.layoutIfNeeded()
     }
   }
@@ -57,6 +82,7 @@ class PanoramaViewController: UIViewController {
   func expandMapViewController() {
     UIView.animate(withDuration: animationDuration) { [unowned self] in
       self.mapViewControllerHeightConstraint?.constant = self.maxMapViewHeight
+      self.downArrowButton.alpha = 1
       self.view.layoutIfNeeded()
     }
   }
@@ -78,5 +104,17 @@ class PanoramaViewController: UIViewController {
     view.addConstraints(constraints)
     mapViewControllerHeightConstraint?.isActive = true
     mapViewController.didMove(toParent: self)
+  }
+}
+
+private extension PanoramaViewController {
+  final class Decorator {
+    private init() {}
+    
+    static func decorate(_ vc: PanoramaViewController) {
+      vc.title = "Угадайте локацию"
+      vc.navigationItem.largeTitleDisplayMode = .always
+      vc.navigationController?.navigationBar.prefersLargeTitles = true
+    }
   }
 }

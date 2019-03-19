@@ -24,6 +24,7 @@
 		4CB9F3E8223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3E7223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift */; };
 		4CB9F3EA223E9086008F736A /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3E9223E9086008F736A /* MapController.swift */; };
 		4CB9F41D223FFA77008F736A /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F41C223FFA77008F736A /* Typealiases.swift */; };
+		4CB9F41F2240F09C008F736A /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F41E2240F09C008F736A /* Extensions+UIViewController.swift */; };
 		7695A6BF00575867942415FF /* Pods_Guess_the_Place_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB044B08C187E5C37810B6AE /* Pods_Guess_the_Place_.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		4CB9F3E7223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		4CB9F3E9223E9086008F736A /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		4CB9F41C223FFA77008F736A /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		4CB9F41E2240F09C008F736A /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
 		5EA408CA3833CAB279C778DF /* Pods-Guess the Place!Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!Tests.release.xcconfig"; path = "Target Support Files/Pods-Guess the Place!Tests/Pods-Guess the Place!Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7B5811B68721DEA074DBBDE7 /* Pods-Guess the Place!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!.debug.xcconfig"; path = "Target Support Files/Pods-Guess the Place!/Pods-Guess the Place!.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A642AC660A24B2ADE70EEF /* Pods-Guess the Place!Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!Tests.debug.xcconfig"; path = "Target Support Files/Pods-Guess the Place!Tests/Pods-Guess the Place!Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				4CB9F3E7223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift */,
+				4CB9F41E2240F09C008F736A /* Extensions+UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 			files = (
 				4CB9F3DC223BB523008F736A /* RandomCoords.swift in Sources */,
 				4CB9F3A3223A5ED8008F736A /* AppDelegate.swift in Sources */,
+				4CB9F41F2240F09C008F736A /* Extensions+UIViewController.swift in Sources */,
 				4CB9F3D0223A7A7A008F736A /* GoogleMapsServiceImplementation.swift in Sources */,
 				4CB9F3E1223E8AA4008F736A /* MapViewController.swift in Sources */,
 				4CB9F3EA223E9086008F736A /* MapController.swift in Sources */,

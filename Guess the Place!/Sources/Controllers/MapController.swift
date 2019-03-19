@@ -25,7 +25,6 @@ class MapController: NSObject, Lifecycable {
 }
 
 extension MapController: GMSMapViewDelegate {
-  
   func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
     locationDragged = true
     mapViewMovingStarted?()

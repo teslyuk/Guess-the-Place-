@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let mapViewController = MapViewController(mapController: mapController)
     let panoramaViewController = PanoramaViewController(controller: panoramaController, mapViewController: mapViewController)
     
-    rootRouter.root(&window, rootViewController: panoramaViewController)
+    rootRouter.root(&window, rootViewController: UINavigationController.init(rootViewController: panoramaViewController))
     return true
   }
   
