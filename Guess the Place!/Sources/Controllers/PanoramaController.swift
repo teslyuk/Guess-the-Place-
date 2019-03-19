@@ -12,6 +12,7 @@ import GoogleMaps
 class PanoramaController: NSObject, Lifecycable {
   private weak var googleService: GoogleMapsService?
   weak var viewController: PanoramaViewController?
+  private var maxRadius: UInt = 3500
   
   var panoramaView: GMSPanoramaView? {
     return viewController?.panoramaView
@@ -23,7 +24,7 @@ class PanoramaController: NSObject, Lifecycable {
   
   func viewDidLoad() {
     let coords = RandomCoords().value
-    panoramaView?.moveNearCoordinate(coords, radius: 1500)
+    panoramaView?.moveNearCoordinate(coords, radius: maxRadius)
     observeMapControllerClosures()
   }
   

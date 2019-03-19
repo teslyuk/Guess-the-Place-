@@ -140,11 +140,11 @@
 			children = (
 				4CB9F41B223FFA65008F736A /* Helpers */,
 				4CB9F3E6223E8CF6008F736A /* Extensions */,
+				4CB9F3CB223A79C9008F736A /* Services */,
 				4CB9F3DA223BB511008F736A /* Models */,
 				4CB9F3D7223BB2F9008F736A /* Protocols */,
 				4CB9F3D1223A7F2A008F736A /* Controllers */,
-				4CB9F3CB223A79C9008F736A /* Services */,
-				4CB9F3C5223A6128008F736A /* Screens */,
+				4CB9F3C5223A6128008F736A /* Views */,
 				4CB9F3C4223A6121008F736A /* Routers */,
 			);
 			path = Sources;
@@ -158,13 +158,13 @@
 			path = Routers;
 			sourceTree = "<group>";
 		};
-		4CB9F3C5223A6128008F736A /* Screens */ = {
+		4CB9F3C5223A6128008F736A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				4CB9F3C6223A6140008F736A /* Panorama */,
 				4CB9F3E3223E8AA8008F736A /* Map */,
 			);
-			path = Screens;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4CB9F3C6223A6140008F736A /* Panorama */ = {
