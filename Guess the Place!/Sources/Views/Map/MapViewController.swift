@@ -11,7 +11,11 @@ import GoogleMaps
 
 class MapViewController: UIViewController {
   
-  @IBOutlet weak var mapView: GMSMapView!
+  let mapView: GMSMapView = {
+    let mapView = GMSMapView()
+    mapView.translatesAutoresizingMaskIntoConstraints = false
+    return mapView
+  }()
   
   private(set) var mapController: MapController?
   
@@ -24,5 +28,12 @@ class MapViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     mapController?.viewDidLoad()
+    addMapView()
+  }
+  
+  private func addMapView() {
+    view.addSubview(mapView)
+    let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[mapView]|,V:|[mapView]|", dict: ["mapView" : mapView])
+    view.addConstraints(constraints)
   }
 }
