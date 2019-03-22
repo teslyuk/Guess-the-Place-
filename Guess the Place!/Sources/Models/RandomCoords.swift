@@ -12,17 +12,17 @@ import CoreLocation
 class RandomCoords {
   let value: CLLocationCoordinate2D
   
-  private let arrayOfCoordinates = [
-    CLLocationCoordinate2D(latitude: 55.809689, longitude: 37.554334),
-    CLLocationCoordinate2D(latitude: 63.417582, longitude: -19.004353),
-    CLLocationCoordinate2D(latitude: 43.645688, longitude: -79.378533),
-    CLLocationCoordinate2D(latitude: -54.346515, longitude: -66.709404),
-    CLLocationCoordinate2D(latitude: 37.460166, longitude: -122.162107),
-    CLLocationCoordinate2D(latitude: 7.832160, longitude: 80.226570),
-    CLLocationCoordinate2D(latitude: -18.447031, longitude: 48.050101),
-    CLLocationCoordinate2D(latitude: -33.732798, longitude: 116.051693),
-    CLLocationCoordinate2D(latitude: 38.483571, longitude: 141.298873),
-    CLLocationCoordinate2D(latitude: -17.681098, longitude: -149.549660),
+  private let arrayOfCoordinates: [CLLocationCoordinate2D] = [
+    CLLocationCoordinate2D(latitude: 47.794221, longitude: 67.702718),
+    CLLocationCoordinate2D(latitude: 39.566577, longitude: 66.760726),
+    CLLocationCoordinate2D(latitude: 50.447362, longitude: 30.522198),
+    CLLocationCoordinate2D(latitude: 51.952970, longitude: 7.625795),
+    CLLocationCoordinate2D(latitude: 51.519099, longitude: -0.122009),
+    CLLocationCoordinate2D(latitude: 43.668027, longitude: -79.400036),
+    CLLocationCoordinate2D(latitude: 40.741958, longitude: -73.986801),
+    CLLocationCoordinate2D(latitude: -6.448730, longitude: -49.405959),
+    CLLocationCoordinate2D(latitude: 31.772360, longitude: 35.213621),
+    CLLocationCoordinate2D(latitude: 55.763693, longitude: 37.656426)
   ]
   
   init () {

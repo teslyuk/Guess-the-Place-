@@ -12,7 +12,7 @@ import GoogleMaps
 class PanoramaController: NSObject, Lifecycable {
   private weak var googleService: GoogleMapsService?
   weak var viewController: PanoramaViewController?
-  private var maxRadius: UInt = 3500
+  private var maxRadius: UInt = 1000
   
   var panoramaView: GMSPanoramaView? {
     return viewController?.panoramaView

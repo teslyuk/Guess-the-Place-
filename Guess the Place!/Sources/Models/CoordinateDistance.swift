@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import CoreLocation
+
+class CoordinateDistance {
+  let value: Double
+  
+  init(firstCoordinate: CLLocationCoordinate2D, secondCoordinate: CLLocationCoordinate2D) {
+    let firstLocation = CLLocation(latitude: firstCoordinate.latitude, longitude: firstCoordinate.longitude)
+    let secondLocation = CLLocation(latitude: secondCoordinate.latitude, longitude: secondCoordinate.longitude)
+    self.value = firstLocation.distance(from: secondLocation)
+  }
+}

@@ -25,6 +25,9 @@
 		4CB9F3EA223E9086008F736A /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3E9223E9086008F736A /* MapController.swift */; };
 		4CB9F41D223FFA77008F736A /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F41C223FFA77008F736A /* Typealiases.swift */; };
 		4CB9F41F2240F09C008F736A /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F41E2240F09C008F736A /* Extensions+UIViewController.swift */; };
+		4CB9F4292244EB70008F736A /* CoordinateDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F4282244EB70008F736A /* CoordinateDistance.swift */; };
+		4CB9F42B2244EBD9008F736A /* PlaySession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F42A2244EBD9008F736A /* PlaySession.swift */; };
+		4CB9F42D2244ED22008F736A /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F42C2244ED22008F736A /* NibLoadable.swift */; };
 		7695A6BF00575867942415FF /* Pods_Guess_the_Place_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB044B08C187E5C37810B6AE /* Pods_Guess_the_Place_.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		4CB9F3E9223E9086008F736A /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		4CB9F41C223FFA77008F736A /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		4CB9F41E2240F09C008F736A /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
+		4CB9F4282244EB70008F736A /* CoordinateDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateDistance.swift; sourceTree = "<group>"; };
+		4CB9F42A2244EBD9008F736A /* PlaySession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySession.swift; sourceTree = "<group>"; };
+		4CB9F42C2244ED22008F736A /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		5EA408CA3833CAB279C778DF /* Pods-Guess the Place!Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!Tests.release.xcconfig"; path = "Target Support Files/Pods-Guess the Place!Tests/Pods-Guess the Place!Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7B5811B68721DEA074DBBDE7 /* Pods-Guess the Place!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!.debug.xcconfig"; path = "Target Support Files/Pods-Guess the Place!/Pods-Guess the Place!.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A642AC660A24B2ADE70EEF /* Pods-Guess the Place!Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!Tests.debug.xcconfig"; path = "Target Support Files/Pods-Guess the Place!Tests/Pods-Guess the Place!Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				4CB9F3D8223BB312008F736A /* Lifecycable.swift */,
+				4CB9F42C2244ED22008F736A /* NibLoadable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -215,6 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				4CB9F3DB223BB523008F736A /* RandomCoords.swift */,
+				4CB9F4282244EB70008F736A /* CoordinateDistance.swift */,
+				4CB9F42A2244EBD9008F736A /* PlaySession.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -449,9 +458,12 @@
 				4CB9F3D3223A7F3F008F736A /* PanoramaController.swift in Sources */,
 				4CB9F3CD223A79E3008F736A /* GoogleMapsService.swift in Sources */,
 				4CB9F3D5223A8054008F736A /* RootRouter.swift in Sources */,
+				4CB9F42D2244ED22008F736A /* NibLoadable.swift in Sources */,
+				4CB9F42B2244EBD9008F736A /* PlaySession.swift in Sources */,
 				4CB9F41D223FFA77008F736A /* Typealiases.swift in Sources */,
 				4CB9F3D9223BB312008F736A /* Lifecycable.swift in Sources */,
 				4CB9F3C9223A615A008F736A /* PanoramaViewController.swift in Sources */,
+				4CB9F4292244EB70008F736A /* CoordinateDistance.swift in Sources */,
 				4CB9F3E8223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
