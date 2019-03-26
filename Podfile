@@ -8,8 +8,7 @@ target 'Guess the Place!' do
 
   pod 'GoogleMaps'
   pod 'GooglePlaces'	
-
-  # Pods for Guess the Place!
+  pod 'RealmSwift'
 
   target 'Guess the Place!Tests' do
     inherit! :search_paths

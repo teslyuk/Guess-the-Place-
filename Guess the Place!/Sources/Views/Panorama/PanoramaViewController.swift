@@ -34,7 +34,7 @@ class PanoramaViewController: UIViewController {
   private var mapViewControllerHeightConstraint: NSLayoutConstraint?
   
   // MARK: Private configuration
-  private let minMapViewHeight: CGFloat = 150
+  private let minMapViewHeight: CGFloat = 100
   private let maxMapViewHeight: CGFloat = 500
   private let animationDuration: TimeInterval = 0.25
   //

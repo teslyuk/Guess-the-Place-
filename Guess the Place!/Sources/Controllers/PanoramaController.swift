@@ -23,7 +23,7 @@ class PanoramaController: NSObject, Lifecycable {
   }
   
   func viewDidLoad() {
-    let coords = RandomCoords().value
+    let coords = RandomCoordinate().value
     panoramaView?.moveNearCoordinate(coords, radius: maxRadius)
     observeMapControllerClosures()
     addTargets()
