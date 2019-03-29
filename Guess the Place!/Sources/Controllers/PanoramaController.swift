@@ -47,12 +47,22 @@ class PanoramaController: NSObject, Lifecycable {
     }
     
     mapController?.mapViewCoordinateTapped = { [unowned self] (coordinate) in
-      self.session.pick(point: coordinate)
-      guard let rightCoordinate = self.session.coordinate else {
-        return
+      
+      if let rightCoordinate = self.session.coordinate, self.session.isSessionActive {
+        mapController?.drawPath(from: coordinate, to: rightCoordinate)
+        mapController?.addMarker(at: coordinate)
+        self.session.end()
+        
+        let result = self.session.pick(point: coordinate)
+        switch result {
+        case .success(let meters):
+          self.viewController?.showAlert(with: "Вы угадали!", and: "Расстояние равно \(meters) метров")
+        case .failure(let meters):
+          self.viewController?.showAlert(with: "Вы ошиблись", and: "Расстояние равно \(meters) метров")
+        case .error:
+          self.viewController?.showAlert(with: "Неизвестная ошибка", and: "Что-то пошло не так...")
+        }
       }
-      mapController?.drawPath(from: coordinate, to: rightCoordinate)
-      mapController?.addMarker(at: coordinate)
     }
   }
 }
