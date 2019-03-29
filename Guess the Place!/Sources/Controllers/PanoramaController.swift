@@ -24,10 +24,17 @@ class PanoramaController: NSObject, Lifecycable {
   }
   
   func viewDidLoad() {
-    let coordinate = RandomCoordinate().value
-    panoramaView?.moveNearCoordinate(coordinate, radius: maxRadius)
     observeMapControllerClosures()
     addTargets()
+    restartSession()
+  }
+  
+  private func restartSession() {
+    let mapController = viewController?.mapViewController?.mapController
+    mapController?.clearMapView()
+    let coordinate = RandomCoordinate().value
+    panoramaView?.moveNearCoordinate(coordinate, radius: maxRadius)
+    
     session.start(coordinate: coordinate)
   }
   
@@ -51,17 +58,20 @@ class PanoramaController: NSObject, Lifecycable {
       if let rightCoordinate = self.session.coordinate, self.session.isSessionActive {
         mapController?.drawPath(from: coordinate, to: rightCoordinate)
         mapController?.addMarker(at: coordinate)
-        self.session.end()
         
-        let result = self.session.pick(point: coordinate)
-        switch result {
-        case .success(let meters):
-          self.viewController?.showAlert(with: "Вы угадали!", and: "Расстояние равно \(meters) метров")
-        case .failure(let meters):
-          self.viewController?.showAlert(with: "Вы ошиблись", and: "Расстояние равно \(meters) метров")
-        case .error:
-          self.viewController?.showAlert(with: "Неизвестная ошибка", and: "Что-то пошло не так...")
-        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+          let result = self.session.pick(point: coordinate)
+          switch result {
+          case .success(let meters):
+            self.viewController?.showAlert(with: "Вы угадали!", and: "Расстояние равно \(meters) метров")
+          case .failure(let meters):
+            self.viewController?.showAlert(with: "Вы ошиблись", and: "Расстояние равно \(meters) метров")
+          case .error:
+            self.viewController?.showAlert(with: "Неизвестная ошибка", and: "Что-то пошло не так...")
+          }
+          
+          self.restartSession()
+        })
       }
     }
   }

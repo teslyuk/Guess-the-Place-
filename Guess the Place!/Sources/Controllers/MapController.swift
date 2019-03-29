@@ -37,6 +37,10 @@ class MapController: NSObject, Lifecycable {
     marker.title = "Ваш выбор"
     marker.map = mapView
   }
+  
+  func clearMapView() {
+    mapView?.clear()
+  }
 }
 
 extension MapController: GMSMapViewDelegate {
