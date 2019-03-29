@@ -45,5 +45,14 @@ class PanoramaController: NSObject, Lifecycable {
     mapController?.mapViewMovingStarted = { [unowned self] in
       self.viewController?.expandMapViewController()
     }
+    
+    mapController?.mapViewCoordinateTapped = { [unowned self] (coordinate) in
+      self.session.pick(point: coordinate)
+      guard let rightCoordinate = self.session.coordinate else {
+        return
+      }
+      mapController?.drawPath(from: coordinate, to: rightCoordinate)
+      mapController?.addMarker(at: coordinate)
+    }
   }
 }
