@@ -553,7 +553,7 @@ public extension RealmCollection where Element: AddableType {
     /**
      Returns the average of all of the values in the collection.
      */
-  func average() -> Double? {
+    func average() -> Double? {
         return average(ofProperty: "self")
     }
 }
@@ -562,13 +562,13 @@ public extension RealmCollection where Element: OptionalProtocol, Element.Wrappe
     /**
      Returns the sum of the values in the collection, or `nil` if the collection is empty.
      */
-  func sum() -> Element.Wrapped {
+    func sum() -> Element.Wrapped {
         return sum(ofProperty: "self")
     }
     /**
      Returns the average of all of the values in the collection.
      */
-  func average() -> Double? {
+    func average() -> Double? {
         return average(ofProperty: "self")
     }
 }
@@ -582,7 +582,7 @@ public extension RealmCollection where Element: Comparable {
 
      - parameter ascending: The direction to sort in.
      */
-  func sorted(ascending: Bool = true) -> Results<Element> {
+    func sorted(ascending: Bool = true) -> Results<Element> {
         return sorted(byKeyPath: "self", ascending: ascending)
     }
 }
@@ -596,7 +596,7 @@ public extension RealmCollection where Element: OptionalProtocol, Element.Wrappe
 
      - parameter ascending: The direction to sort in.
      */
-  func sorted(ascending: Bool = true) -> Results<Element> {
+    func sorted(ascending: Bool = true) -> Results<Element> {
         return sorted(byKeyPath: "self", ascending: ascending)
     }
 }

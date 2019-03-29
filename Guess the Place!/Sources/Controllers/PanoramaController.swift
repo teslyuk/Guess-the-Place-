@@ -13,6 +13,7 @@ class PanoramaController: NSObject, Lifecycable {
   private weak var googleService: GoogleMapsService?
   weak var viewController: PanoramaViewController?
   private var maxRadius: UInt = 1000
+  private let session: PlaySession = PlaySession()
   
   var panoramaView: GMSPanoramaView? {
     return viewController?.panoramaView
@@ -23,10 +24,11 @@ class PanoramaController: NSObject, Lifecycable {
   }
   
   func viewDidLoad() {
-    let coords = RandomCoordinate().value
-    panoramaView?.moveNearCoordinate(coords, radius: maxRadius)
+    let coordinate = RandomCoordinate().value
+    panoramaView?.moveNearCoordinate(coordinate, radius: maxRadius)
     observeMapControllerClosures()
     addTargets()
+    session.start(coordinate: coordinate)
   }
   
   private func addTargets() {
