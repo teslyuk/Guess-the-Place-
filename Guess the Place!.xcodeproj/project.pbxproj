@@ -13,6 +13,8 @@
 		4C44CDBA224F6BA2002F8565 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44CDB9224F6BA2002F8565 /* HistoryController.swift */; };
 		4C44CDBD224F6C26002F8565 /* RealmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44CDBC224F6C26002F8565 /* RealmInteractor.swift */; };
 		4C44CDBF224F706F002F8565 /* Attemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44CDBE224F706F002F8565 /* Attemp.swift */; };
+		4C44CDC4224FBFE9002F8565 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44CDC2224FBFE9002F8565 /* HistoryTableViewCell.swift */; };
+		4C44CDC5224FBFE9002F8565 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C44CDC3224FBFE9002F8565 /* HistoryTableViewCell.xib */; };
 		4CB9F3A3223A5ED8008F736A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3A2223A5ED8008F736A /* AppDelegate.swift */; };
 		4CB9F3AA223A5EDA008F736A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB9F3A9223A5EDA008F736A /* Assets.xcassets */; };
 		4CB9F3AD223A5EDA008F736A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CB9F3AB223A5EDA008F736A /* LaunchScreen.storyboard */; };
@@ -53,6 +55,8 @@
 		4C44CDB9224F6BA2002F8565 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		4C44CDBC224F6C26002F8565 /* RealmInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmInteractor.swift; sourceTree = "<group>"; };
 		4C44CDBE224F706F002F8565 /* Attemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attemp.swift; sourceTree = "<group>"; };
+		4C44CDC2224FBFE9002F8565 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		4C44CDC3224FBFE9002F8565 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		4CB9F39F223A5ED8008F736A /* Guess the Place!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess the Place!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB9F3A2223A5ED8008F736A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CB9F3A9223A5EDA008F736A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +121,33 @@
 				4C44CDBC224F6C26002F8565 /* RealmInteractor.swift */,
 			);
 			path = Interactors;
+			sourceTree = "<group>";
+		};
+		4C44CDC0224FBFA2002F8565 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4CB9F3C6223A6140008F736A /* Panorama */,
+				4CB9F3E3223E8AA8008F736A /* Map */,
+				4C44CDB8224F6B42002F8565 /* History */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4C44CDC1224FBFB2002F8565 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4C44CDC6224FBFEC002F8565 /* History */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4C44CDC6224FBFEC002F8565 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				4C44CDC2224FBFE9002F8565 /* HistoryTableViewCell.swift */,
+				4C44CDC3224FBFE9002F8565 /* HistoryTableViewCell.xib */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		4CB9F396223A5ED7008F736A = {
@@ -195,9 +226,8 @@
 		4CB9F3C5223A6128008F736A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4CB9F3C6223A6140008F736A /* Panorama */,
-				4CB9F3E3223E8AA8008F736A /* Map */,
-				4C44CDB8224F6B42002F8565 /* History */,
+				4C44CDC0224FBFA2002F8565 /* Screens */,
+				4C44CDC1224FBFB2002F8565 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -391,6 +421,7 @@
 			files = (
 				4CB9F3AD223A5EDA008F736A /* LaunchScreen.storyboard in Resources */,
 				4CB9F3AA223A5EDA008F736A /* Assets.xcassets in Resources */,
+				4C44CDC5224FBFE9002F8565 /* HistoryTableViewCell.xib in Resources */,
 				4C44CDB7224F6B3D002F8565 /* HistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +544,7 @@
 				4C44CDBF224F706F002F8565 /* Attemp.swift in Sources */,
 				4CB9F3EA223E9086008F736A /* MapController.swift in Sources */,
 				4CB9F3D3223A7F3F008F736A /* PanoramaController.swift in Sources */,
+				4C44CDC4224FBFE9002F8565 /* HistoryTableViewCell.swift in Sources */,
 				4CB9F3CD223A79E3008F736A /* GoogleMapsService.swift in Sources */,
 				4C44CDBD224F6C26002F8565 /* RealmInteractor.swift in Sources */,
 				4CB9F3D5223A8054008F736A /* RootRouter.swift in Sources */,
