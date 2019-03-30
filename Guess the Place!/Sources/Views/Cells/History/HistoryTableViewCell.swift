@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import GoogleMaps
 
-class HistoryTableViewCell: UITableViewCell {
+class HistoryTableViewCell: UITableViewCell, NibLoadable {
+  
+  @IBOutlet private weak var resultImageView: UIImageView!
+  @IBOutlet private weak var distanceLabel: UILabel!
+  @IBOutlet private weak var mapView: GMSMapView!
   
   override func awakeFromNib() {
     super.awakeFromNib()
