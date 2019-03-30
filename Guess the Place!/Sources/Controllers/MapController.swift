@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 
-class MapController: NSObject, Lifecycable {
+final class MapController: NSObject, Lifecycable {
   weak var mapViewController: MapViewController?
   private var locationDragged: Bool = false
   private var mapView: GMSMapView? {

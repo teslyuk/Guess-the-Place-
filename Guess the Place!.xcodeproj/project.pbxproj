@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		466A30633CFD717FA85B9CB9 /* Pods_Guess_the_Place_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C497331F8AC600104C98B1D /* Pods_Guess_the_Place_Tests.framework */; };
+		4C44CDB6224F6B3D002F8565 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44CDB4224F6B3D002F8565 /* HistoryViewController.swift */; };
+		4C44CDB7224F6B3D002F8565 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C44CDB5224F6B3D002F8565 /* HistoryViewController.xib */; };
+		4C44CDBA224F6BA2002F8565 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44CDB9224F6BA2002F8565 /* HistoryController.swift */; };
 		4CB9F3A3223A5ED8008F736A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3A2223A5ED8008F736A /* AppDelegate.swift */; };
 		4CB9F3AA223A5EDA008F736A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB9F3A9223A5EDA008F736A /* Assets.xcassets */; };
 		4CB9F3AD223A5EDA008F736A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CB9F3AB223A5EDA008F736A /* LaunchScreen.storyboard */; };
@@ -43,6 +46,9 @@
 /* Begin PBXFileReference section */
 		1DBABB6458F15E818FDD718B /* Pods-Guess the Place!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess the Place!.release.xcconfig"; path = "Target Support Files/Pods-Guess the Place!/Pods-Guess the Place!.release.xcconfig"; sourceTree = "<group>"; };
 		3C497331F8AC600104C98B1D /* Pods_Guess_the_Place_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guess_the_Place_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C44CDB4224F6B3D002F8565 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		4C44CDB5224F6B3D002F8565 /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		4C44CDB9224F6BA2002F8565 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		4CB9F39F223A5ED8008F736A /* Guess the Place!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess the Place!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB9F3A2223A5ED8008F736A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CB9F3A9223A5EDA008F736A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C44CDB8224F6B42002F8565 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				4C44CDB4224F6B3D002F8565 /* HistoryViewController.swift */,
+				4C44CDB5224F6B3D002F8565 /* HistoryViewController.xib */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		4CB9F396223A5ED7008F736A = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +184,7 @@
 			children = (
 				4CB9F3C6223A6140008F736A /* Panorama */,
 				4CB9F3E3223E8AA8008F736A /* Map */,
+				4C44CDB8224F6B42002F8565 /* History */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +219,7 @@
 			children = (
 				4CB9F3D2223A7F3F008F736A /* PanoramaController.swift */,
 				4CB9F3E9223E9086008F736A /* MapController.swift */,
+				4C44CDB9224F6BA2002F8565 /* HistoryController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -360,6 +377,7 @@
 			files = (
 				4CB9F3AD223A5EDA008F736A /* LaunchScreen.storyboard in Resources */,
 				4CB9F3AA223A5EDA008F736A /* Assets.xcassets in Resources */,
+				4C44CDB7224F6B3D002F8565 /* HistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +494,7 @@
 				4CB9F3A3223A5ED8008F736A /* AppDelegate.swift in Sources */,
 				4CB9F41F2240F09C008F736A /* Extensions+UIViewController.swift in Sources */,
 				4CB9F3D0223A7A7A008F736A /* GoogleMapsServiceImplementation.swift in Sources */,
+				4C44CDBA224F6BA2002F8565 /* HistoryController.swift in Sources */,
 				4CB9F3E1223E8AA4008F736A /* MapViewController.swift in Sources */,
 				4CB9F3EA223E9086008F736A /* MapController.swift in Sources */,
 				4CB9F3D3223A7F3F008F736A /* PanoramaController.swift in Sources */,
@@ -487,6 +506,7 @@
 				4CB9F3D9223BB312008F736A /* Lifecycable.swift in Sources */,
 				4CB9F3C9223A615A008F736A /* PanoramaViewController.swift in Sources */,
 				4CB9F4292244EB70008F736A /* CoordinateDistance.swift in Sources */,
+				4C44CDB6224F6B3D002F8565 /* HistoryViewController.swift in Sources */,
 				4CB9F3E8223E8D0F008F736A /* Extensions+NSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

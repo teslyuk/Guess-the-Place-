@@ -9,7 +9,7 @@
 import Foundation
 import GoogleMaps
 
-class PanoramaController: NSObject, Lifecycable {
+final class PanoramaController: NSObject, Lifecycable {
   private weak var googleService: GoogleMapsService?
   weak var viewController: PanoramaViewController?
   private var maxRadius: UInt = 1000
