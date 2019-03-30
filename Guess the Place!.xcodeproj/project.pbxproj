@@ -11,6 +11,8 @@
 		4C44CDB6224F6B3D002F8565 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44CDB4224F6B3D002F8565 /* HistoryViewController.swift */; };
 		4C44CDB7224F6B3D002F8565 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C44CDB5224F6B3D002F8565 /* HistoryViewController.xib */; };
 		4C44CDBA224F6BA2002F8565 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44CDB9224F6BA2002F8565 /* HistoryController.swift */; };
+		4C44CDBD224F6C26002F8565 /* RealmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44CDBC224F6C26002F8565 /* RealmInteractor.swift */; };
+		4C44CDBF224F706F002F8565 /* Attemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C44CDBE224F706F002F8565 /* Attemp.swift */; };
 		4CB9F3A3223A5ED8008F736A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F3A2223A5ED8008F736A /* AppDelegate.swift */; };
 		4CB9F3AA223A5EDA008F736A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB9F3A9223A5EDA008F736A /* Assets.xcassets */; };
 		4CB9F3AD223A5EDA008F736A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CB9F3AB223A5EDA008F736A /* LaunchScreen.storyboard */; };
@@ -49,6 +51,8 @@
 		4C44CDB4224F6B3D002F8565 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		4C44CDB5224F6B3D002F8565 /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
 		4C44CDB9224F6BA2002F8565 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		4C44CDBC224F6C26002F8565 /* RealmInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmInteractor.swift; sourceTree = "<group>"; };
+		4C44CDBE224F706F002F8565 /* Attemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attemp.swift; sourceTree = "<group>"; };
 		4CB9F39F223A5ED8008F736A /* Guess the Place!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess the Place!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB9F3A2223A5ED8008F736A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CB9F3A9223A5EDA008F736A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +111,14 @@
 			path = History;
 			sourceTree = "<group>";
 		};
+		4C44CDBB224F6C0C002F8565 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				4C44CDBC224F6C26002F8565 /* RealmInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
 		4CB9F396223A5ED7008F736A = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +171,7 @@
 		4CB9F3C3223A6109008F736A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4C44CDBB224F6C0C002F8565 /* Interactors */,
 				4CB9F41B223FFA65008F736A /* Helpers */,
 				4CB9F3E6223E8CF6008F736A /* Extensions */,
 				4CB9F3CB223A79C9008F736A /* Services */,
@@ -239,6 +252,7 @@
 				4CB9F3DB223BB523008F736A /* RandomCoordinate.swift */,
 				4CB9F4282244EB70008F736A /* CoordinateDistance.swift */,
 				4CB9F42A2244EBD9008F736A /* PlaySession.swift */,
+				4C44CDBE224F706F002F8565 /* Attemp.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -496,9 +510,11 @@
 				4CB9F3D0223A7A7A008F736A /* GoogleMapsServiceImplementation.swift in Sources */,
 				4C44CDBA224F6BA2002F8565 /* HistoryController.swift in Sources */,
 				4CB9F3E1223E8AA4008F736A /* MapViewController.swift in Sources */,
+				4C44CDBF224F706F002F8565 /* Attemp.swift in Sources */,
 				4CB9F3EA223E9086008F736A /* MapController.swift in Sources */,
 				4CB9F3D3223A7F3F008F736A /* PanoramaController.swift in Sources */,
 				4CB9F3CD223A79E3008F736A /* GoogleMapsService.swift in Sources */,
+				4C44CDBD224F6C26002F8565 /* RealmInteractor.swift in Sources */,
 				4CB9F3D5223A8054008F736A /* RootRouter.swift in Sources */,
 				4CB9F42D2244ED22008F736A /* NibLoadable.swift in Sources */,
 				4CB9F42B2244EBD9008F736A /* PlaySession.swift in Sources */,

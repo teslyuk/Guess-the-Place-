@@ -9,5 +9,9 @@
 import Foundation
 
 final class HistoryController: NSObject, Lifecycable {
+  private weak var realmInteractor: RealmInteractor?
   
+  init(realmInteractor: RealmInteractor) {
+    self.realmInteractor = realmInteractor
+  }
 }

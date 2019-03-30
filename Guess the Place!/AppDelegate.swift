@@ -15,18 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private let googleService: GoogleMapsService = GoogleMapsServiceImplementation()
   private let apiKey = "AIzaSyDz9wkuMNtc4JICs9066L2wLnv6O_pR4hY"
   private let rootRouter = RootRouter()
+  private let realmInteractor = RealmInteractor()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     googleService.register(with: apiKey)
     
-    let panoramaController = PanoramaController(googleService: googleService)
+    let panoramaController = PanoramaController(googleService: googleService, realmInteractor: realmInteractor)
     let mapController = MapController()
     let mapViewController = MapViewController(mapController: mapController)
     let panoramaViewController = PanoramaViewController(controller: panoramaController, mapViewController: mapViewController)
-    
     let ncPanoramaViewController = UINavigationController.init(rootViewController: panoramaViewController)
+    
+    let historyController = HistoryController(realmInteractor: realmInteractor)
+    let historyViewController = HistoryViewController(controller: historyController)
+    let ncHistoryViewController = UINavigationController.init(rootViewController: historyViewController)
+    
     let tabBarController = UITabBarController()
-    tabBarController.setViewControllers([ncPanoramaViewController], animated: false)
+    tabBarController.setViewControllers([ncPanoramaViewController, ncHistoryViewController], animated: false)
     
     rootRouter.root(&window, rootViewController: tabBarController)
     return true
