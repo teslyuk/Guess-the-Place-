@@ -27,6 +27,7 @@ class PanoramaViewController: UIViewController {
     button.imageView?.tintColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
     return button
   }()
+  
   //
 
   private(set) var mapViewController: MapViewController?
@@ -34,7 +35,7 @@ class PanoramaViewController: UIViewController {
   private var mapViewControllerHeightConstraint: NSLayoutConstraint?
   
   // MARK: Private configuration
-  private let minMapViewHeight: CGFloat = 100
+  private let minMapViewHeight: CGFloat = 200
   private let maxMapViewHeight: CGFloat = 500
   private let animationDuration: TimeInterval = 0.25
   //
@@ -53,6 +54,22 @@ class PanoramaViewController: UIViewController {
     addPanoramaView()
     addMapViewController()
     addDownArrowButton()
+    addRightBarButton()
+    setTabBarItem()
+  }
+  
+  private func setTabBarItem() {
+    let item = UITabBarItem(title: "Игра", image: #imageLiteral(resourceName: "panorama.png"), tag: 0)
+    self.tabBarItem = item
+  }
+  
+  private func addRightBarButton() {
+    let rightBarButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshButtonClicked))
+    navigationItem.rightBarButtonItem = rightBarButton
+  }
+  
+  @objc private func refreshButtonClicked() {
+    controller?.rightBarButtonClicked()
   }
   
   private func addDownArrowButton() {
@@ -99,8 +116,8 @@ class PanoramaViewController: UIViewController {
     
     view.addSubview(mapView)
     mapView.translatesAutoresizingMaskIntoConstraints = false
-    let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[mapView]|,V:[panoramaView][mapView]|", dict: ["panoramaView" : panoramaView, "mapView" : mapView])
-    mapViewControllerHeightConstraint = mapView.heightAnchor.constraint(equalToConstant: 100)
+    let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[mapView]|,V:[panoramaView][mapView]|", dict: ["panoramaView": panoramaView, "mapView": mapView])
+    mapViewControllerHeightConstraint = mapView.heightAnchor.constraint(equalToConstant: minMapViewHeight)
     view.addConstraints(constraints)
     mapViewControllerHeightConstraint?.isActive = true
     mapViewController.didMove(toParent: self)
@@ -112,7 +129,7 @@ private extension PanoramaViewController {
     private init() {}
     
     static func decorate(_ vc: PanoramaViewController) {
-      vc.title = "Угадайте локацию"
+      vc.navigationItem.title = "Угадайте локацию"
       vc.navigationItem.largeTitleDisplayMode = .always
       vc.navigationController?.navigationBar.prefersLargeTitles = true
     }

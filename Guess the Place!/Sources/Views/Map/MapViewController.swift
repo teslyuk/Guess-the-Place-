@@ -33,7 +33,7 @@ class MapViewController: UIViewController {
   
   private func addMapView() {
     view.addSubview(mapView)
-    let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[mapView]|,V:|[mapView]|", dict: ["mapView" : mapView])
+    let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[mapView]|,V:|[mapView]|", dict: ["mapView": mapView])
     view.addConstraints(constraints)
   }
 }

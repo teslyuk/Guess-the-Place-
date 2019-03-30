@@ -42,6 +42,10 @@ class PanoramaController: NSObject, Lifecycable {
     viewController?.downArrowButton.addTarget(self, action: #selector(downArrowButtonClicked), for: .touchUpInside)
   }
   
+  func rightBarButtonClicked() {
+    restartSession()
+  }
+  
   @objc private func downArrowButtonClicked() {
     viewController?.hideMapViewController()
   }
@@ -58,7 +62,6 @@ class PanoramaController: NSObject, Lifecycable {
       if let rightCoordinate = self.session.coordinate, self.session.isSessionActive {
         mapController?.drawPath(from: coordinate, to: rightCoordinate)
         mapController?.addMarker(at: coordinate)
-        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
           let result = self.session.pick(point: coordinate)
           switch result {
@@ -69,7 +72,6 @@ class PanoramaController: NSObject, Lifecycable {
           case .error:
             self.viewController?.showAlert(with: "Неизвестная ошибка", and: "Что-то пошло не так...")
           }
-          
           self.restartSession()
         })
       }
