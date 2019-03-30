@@ -17,6 +17,23 @@ class HistoryTableViewCell: UITableViewCell, NibLoadable {
   
   override func awakeFromNib() {
     super.awakeFromNib()
+    Decorator.decorate(self)
   }
   
+  func configure(by attemp: Attemp) {
+    distanceLabel.text = "Дистанция: \(attemp.distance) метров"
+    
+  }
+  
+}
+
+private extension HistoryTableViewCell {
+  final class Decorator {
+    private init() {}
+    
+    static func decorate(_ cell: HistoryTableViewCell) {
+      cell.resultImageView.contentMode = .scaleAspectFit
+      cell.mapView.isUserInteractionEnabled = false
+    }
+  }
 }
