@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let historyController = HistoryController(realmInteractor: realmInteractor)
     let historyViewController = HistoryViewController(controller: historyController)
+    historyViewController.setTabBarItem()
     let ncHistoryViewController = UINavigationController.init(rootViewController: historyViewController)
     
     let tabBarController = UITabBarController()

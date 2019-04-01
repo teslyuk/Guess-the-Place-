@@ -22,7 +22,9 @@ class HistoryTableViewCell: UITableViewCell, NibLoadable {
   
   func configure(by attemp: Attemp) {
     distanceLabel.text = "Дистанция: \(attemp.distance) метров"
-    
+    resultImageView.image = (attemp.distance < 1000) ? UIImage.init(named: "right") : UIImage.init(named: "wrong")
+    mapView.animate(toLocation: attemp.pickedCoordinate)
+    mapView.animate(toZoom: 16)
   }
   
 }

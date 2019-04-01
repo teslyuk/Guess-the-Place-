@@ -12,7 +12,9 @@ import RealmSwift
 final class RealmInteractor {
   func save(object: Object) {
     let realm = try! Realm()
-    realm.add(object, update: true)
+    try! realm.write {
+      realm.add(object)
+    }
   }
   
   func fetchItems<T: Object>(ofType type: T.Type) -> [T] {

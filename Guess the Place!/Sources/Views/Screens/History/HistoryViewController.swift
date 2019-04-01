@@ -9,27 +9,68 @@
 import UIKit
 
 class HistoryViewController: UIViewController {
+
+  @IBOutlet weak var tableView: UITableView!
   
   private var controller: HistoryController?
   
   convenience init(controller: HistoryController) {
     self.init()
     self.controller = controller
+    self.controller?.viewController = self
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    Decorator.decorate(self)
     setTabBarItem()
+    delegating()
+    registerCells()
   }
   
-  private func setTabBarItem() {
-    let item = UITabBarItem(title: "История", image: #imageLiteral(resourceName: "clock.png"), tag: 1)
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    controller?.viewWillAppear()
+  }
+  
+  func setTabBarItem() {
+    let item = UITabBarItem(title: "История", image: UIImage.init(named: "clock"), tag: 1)
     self.tabBarItem = item
   }
   
+  private func delegating() {
+    tableView.delegate = self
+    tableView.dataSource = self
+  }
+  
+  private func registerCells() {
+    tableView.register(HistoryTableViewCell.nib, forCellReuseIdentifier: HistoryTableViewCell.name)
+  }
 }
 
-private extension PanoramaViewController {
+extension HistoryViewController: UITableViewDataSource {
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 160
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return controller?.attemps.count ?? 0
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: HistoryTableViewCell.name, for: indexPath) as! HistoryTableViewCell
+    let attemp = (controller?.attemps ?? [])[indexPath.row]
+    cell.configure(by: attemp)
+    return cell
+  }
+}
+
+extension HistoryViewController: UITableViewDelegate {
+  
+}
+
+private extension HistoryViewController {
   final class Decorator {
     private init() {}
     
