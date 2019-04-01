@@ -78,6 +78,7 @@ private extension HistoryViewController {
       vc.navigationItem.title = "История попыток"
       vc.navigationItem.largeTitleDisplayMode = .always
       vc.navigationController?.navigationBar.prefersLargeTitles = true
+      vc.tableView.separatorColor = .clear
     }
   }
 }

@@ -25,6 +25,8 @@ class HistoryTableViewCell: UITableViewCell, NibLoadable {
     resultImageView.image = (attemp.distance < 1000) ? UIImage.init(named: "right") : UIImage.init(named: "wrong")
     mapView.animate(toLocation: attemp.pickedCoordinate)
     mapView.animate(toZoom: 16)
+    let marker = GMSMarker(position: attemp.pickedCoordinate)
+    marker.map = mapView
   }
   
 }
