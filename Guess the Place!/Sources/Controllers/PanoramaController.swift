@@ -78,10 +78,10 @@ final class PanoramaController: NSObject, Lifecycable {
           switch result {
           case .success(let meters):
             self.addAttempToHistory(distance: meters, pickedCoordinate: coordinate, rightCoordinate: rightCoordinate)
-            self.viewController?.showAlert(with: "Вы угадали!", and: "Расстояние равно \(meters) метров")
+            self.viewController?.showAlert(with: "Вы угадали!", and: "Расстояние равно \(round(meters)) метров")
           case .failure(let meters):
             self.addAttempToHistory(distance: meters, pickedCoordinate: coordinate, rightCoordinate: rightCoordinate)
-            self.viewController?.showAlert(with: "Вы ошиблись", and: "Расстояние равно \(meters) метров")
+            self.viewController?.showAlert(with: "Вы ошиблись", and: "Расстояние равно \(round(meters)) метров")
           case .error:
             self.viewController?.showAlert(with: "Неизвестная ошибка", and: "Что-то пошло не так...")
           }

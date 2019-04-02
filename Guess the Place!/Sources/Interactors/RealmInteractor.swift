@@ -22,4 +22,12 @@ final class RealmInteractor {
     let items = Array(results)
     return items
   }
+  
+  func removeItems<T: Object>(ofType type: T.Type) {
+    let realm = try! Realm()
+    let results = realm.objects(type)
+    try! realm.write {
+      realm.delete(results)
+    }
+  }
 }

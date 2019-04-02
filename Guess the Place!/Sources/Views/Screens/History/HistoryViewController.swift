@@ -26,12 +26,22 @@ class HistoryViewController: UIViewController {
     setTabBarItem()
     delegating()
     registerCells()
+    //addRightBarButton()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(true)
     controller?.viewWillAppear()
   }
+  
+//  private func addRightBarButton() {
+//    let rightBarButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(clearHistory))
+//    navigationItem.rightBarButtonItem = rightBarButton
+//  }
+//
+//  @objc private func clearHistory() {
+//    controller?.clearAttemps()
+//  }
   
   func setTabBarItem() {
     let item = UITabBarItem(title: "История", image: UIImage.init(named: "clock"), tag: 1)
@@ -49,7 +59,6 @@ class HistoryViewController: UIViewController {
 }
 
 extension HistoryViewController: UITableViewDataSource {
-  
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 160
   }

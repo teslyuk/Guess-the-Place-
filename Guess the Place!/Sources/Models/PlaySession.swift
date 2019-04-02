@@ -25,7 +25,7 @@ final class PlaySession {
     
     let distance = CoordinateDistance(firstCoordinate: point, secondCoordinate: coordinate).value
     switch distance {
-    case 0...500:
+    case 0...1000:
       return Result.success(distance)
     default:
       return Result.failure(distance)
