@@ -21,14 +21,13 @@ class HistoryTableViewCell: UITableViewCell, NibLoadable {
   }
   
   func configure(by attemp: Attemp) {
-    distanceLabel.text = "Дистанция: \(attemp.distance) метров"
+    distanceLabel.text = "Дистанция: \(round(attemp.distance)) метров"
     resultImageView.image = (attemp.distance < 1000) ? UIImage.init(named: "right") : UIImage.init(named: "wrong")
     mapView.animate(toLocation: attemp.pickedCoordinate)
     mapView.animate(toZoom: 16)
     let marker = GMSMarker(position: attemp.pickedCoordinate)
     marker.map = mapView
   }
-  
 }
 
 private extension HistoryTableViewCell {

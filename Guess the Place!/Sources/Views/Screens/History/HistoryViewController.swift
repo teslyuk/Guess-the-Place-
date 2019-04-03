@@ -44,7 +44,8 @@ class HistoryViewController: UIViewController {
   }
 
   @objc private func clearHistory() {
-    //controller?.clearAttemps()
+    controller?.clearAttemps()
+    
   }
   
   func setTabBarItem() {

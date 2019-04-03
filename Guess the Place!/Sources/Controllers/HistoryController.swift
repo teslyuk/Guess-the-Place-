@@ -32,6 +32,7 @@ final class HistoryController: NSObject, Lifecycable {
   
   func clearAttemps() {
     realmInteractor?.removeItems(ofType: Attemp.self)
+    attemps = []
     tableView?.reloadData()
   }
 }
