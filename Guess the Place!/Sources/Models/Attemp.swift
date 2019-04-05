@@ -14,7 +14,6 @@ class Attemp: Object {
   @objc dynamic var distance: Double = 0
   @objc dynamic var pickedCoordinateLatitude: Double = 0
   @objc dynamic var pickedCoordinateLongitude: Double = 0
-  
   @objc dynamic var rightCoordinateLatitude: Double = 0
   @objc dynamic var rightCoordinateLongitude: Double = 0
   

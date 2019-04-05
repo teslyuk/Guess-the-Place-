@@ -27,7 +27,6 @@ class PanoramaViewController: UIViewController {
     button.imageView?.tintColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
     return button
   }()
-  
   //
 
   private(set) var mapViewController: MapViewController?
@@ -78,6 +77,7 @@ class PanoramaViewController: UIViewController {
     guard let mapView = mapViewController?.view else {
       return
     }
+    
     let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:[downArrowButton(\(sizeConstant))]-16-|,V:[downArrowButton(\(sizeConstant))]-16-[mapView]", dict: ["downArrowButton" : downArrowButton, "mapView" : mapView])
     view.addConstraints(constraints)
   }
@@ -127,7 +127,6 @@ class PanoramaViewController: UIViewController {
 private extension PanoramaViewController {
   final class Decorator {
     private init() {}
-    
     static func decorate(_ vc: PanoramaViewController) {
       vc.navigationItem.title = "Угадайте локацию"
       vc.navigationItem.largeTitleDisplayMode = .always

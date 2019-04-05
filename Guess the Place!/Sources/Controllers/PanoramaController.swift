@@ -10,6 +10,7 @@ import Foundation
 import GoogleMaps
 
 final class PanoramaController: NSObject, Lifecycable {
+  
   private weak var googleService: GoogleMapsService?
   private weak var realmInteractor: RealmInteractor?
   weak var viewController: PanoramaViewController?
