@@ -13,6 +13,7 @@ final class HistoryController: NSObject, Lifecycable {
   private(set) var attemps: [Attemp] = []
   
   weak var viewController: HistoryViewController?
+  
   var tableView: UITableView? {
     return viewController?.tableView
   }
