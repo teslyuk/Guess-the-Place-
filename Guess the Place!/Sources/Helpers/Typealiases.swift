@@ -8,4 +8,4 @@
 
 import Foundation
 
-typealias VoidClosure = (() -> Void)
+typealias VoidClosure = () -> Void
