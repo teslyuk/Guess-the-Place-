@@ -78,13 +78,13 @@ class PanoramaViewController: UIViewController {
       return
     }
     
-    let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:[downArrowButton(\(sizeConstant))]-16-|,V:[downArrowButton(\(sizeConstant))]-16-[mapView]", dict: ["downArrowButton" : downArrowButton, "mapView" : mapView])
+    let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:[downArrowButton(\(sizeConstant))]-16-|,V:[downArrowButton(\(sizeConstant))]-16-[mapView]", dict: ["downArrowButton": downArrowButton, "mapView": mapView])
     view.addConstraints(constraints)
   }
   
   private func addPanoramaView() {
     view.addSubview(panoramaView)
-    let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[panoramaView]|,V:|[panoramaView]", dict: ["panoramaView" : panoramaView])
+    let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[panoramaView]|,V:|[panoramaView]", dict: ["panoramaView": panoramaView])
     view.addConstraints(constraints)
   }
   
